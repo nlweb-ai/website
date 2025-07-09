@@ -4,7 +4,15 @@
     width: 100%;
     text-align: left;
     margin: 0;
+    padding: 0;
     background: #fff;
+}
+
+/* Override common GitHub Pages wrapper styles */
+.container, .wrapper, .page-wrapper, .main-wrapper {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 #intro
 {
@@ -25,6 +33,13 @@
 }
 
 /* -- general -- */
+html, body
+{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll from viewport width trick */
+}
+
 body
 {
     color: #3A4956;
@@ -120,10 +135,14 @@ tr.alt
 /* -- header/title -- */
 #pageHeader
 {
-    width: 100%;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
     height: 80px;
     background: #990000;
-    position: relative;
 }
 #pageHeader h1
 {
@@ -144,6 +163,12 @@ tr.alt
 /* -- nav bar -- */
 #selectionbar
 {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
     color: #fff;
     height: 46px;
     background: #660000;
